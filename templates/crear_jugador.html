@@ -1,0 +1,84 @@
+{% include "header.html" %}
+
+{% block content %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>GarciaFutbolitis</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron.css" rel="stylesheet">
+  </head>
+
+  <body>
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">CREA JUGADORES</h1>
+          <p> ¿Quieres meter a los nuevos mejores jugadores de la temporada en el ranking? HÁZLO</p>
+        </div>
+      </div>
+
+<form action="/GarciaFutbolitis/jugadores/crear/" method="POST">
+<div style="text-align:left;">
+<table border="4" style="margin: 100px auto;">
+    {% csrf_token %}
+<tr >
+<td>
+
+        <center><label  style="margin:10px" for="Id"> Id: </label></center>
+    <center><input style="margin:10px" id="id" type="number" name="id" value=""></center>
+
+    <center><label style="margin:10px" for="Nombre"> Nombre: </label></center>
+    <center><input style="margin:10px" id="nombre" type="text" name="nombre" value=""></center>
+
+    <center><label  style="margin:10px"for="Apellidos"> Apellidos: </label></center>
+    <center><input  style="margin:10px" id="apellidos" type="text" name="apellidos" value=""></center>
+
+    <center><label style="margin:10px" for="Nacimiento"> Nacimiento: </label></center>
+   <center> <input style="margin:10px" id="fecha" type="date" name="fecha" value=""></center>
+
+   <center> <label style="margin:10px" for="Ranking"> Ranking: </label></center>
+   <center> <input  style="margin:10px" id="ranking" type="number" name="ranking" value=""></center>
+
+    <center><label style="margin:10px" for="Equipo"> Equipo: </label></center>
+    <center><input style="margin:10px" id="equipos" type="number" name="equipo" value=""></center>
+
+
+    <center> <input style="margin:10px" class="btn btn-secondary" type="submit" value="Crear" style="margin-top: 10px"></center>
+    </tr>
+</td>
+</table>
+</div>
+</form>
+</form>
+
+     <hr>
+
+    <footer class="container">
+      <p>&copy; Company 2022</p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+{% endblock %}
+
